@@ -2,6 +2,7 @@
 
 /**
 * main - Entry point
+* Description: using sizeof to print the size
 * Return: Always 0 (Success)
 */
 
