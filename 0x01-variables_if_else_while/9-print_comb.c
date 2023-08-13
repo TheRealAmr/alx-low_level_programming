@@ -16,7 +16,7 @@ int main(void)
 	{
 		putchar(digit);
 		putchar(',');
-		putchar(" ");
+		putchar(' ');
 		digit++;
 	}
 
