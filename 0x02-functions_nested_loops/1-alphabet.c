@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * print_alphabet - using the _putchar function and prints from a to zx
-*/
+ * print_alphabet - Entry point
+ * Return:0
+ */
 
 void print_alphabet(void)
 {
