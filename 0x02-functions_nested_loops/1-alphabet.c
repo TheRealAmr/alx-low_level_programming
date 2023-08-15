@@ -16,11 +16,4 @@ void print_alphabet(void)
 		ch++;
 	}
 	putchar('\n');
-
-	return (0);
-}
-
-int main(void)
-{
-	print_alphabet();
 }
