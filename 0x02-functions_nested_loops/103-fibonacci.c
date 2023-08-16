@@ -8,7 +8,7 @@
  * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
 	unsigned long fib1 = 0, fib2 = 1, sum;
 	float total;
