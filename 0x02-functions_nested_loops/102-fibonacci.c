@@ -9,17 +9,21 @@
  */
 
 int main(void)
-{
-	int i;
-	int t1 = 1, t2 = 2;
-	int nextTerm = t1 + t2;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-	for (i = 2; i <= 50; ++i)
+	for (count = 0; count < 50; count++)
 	{
-		printf("%d, ", nextTerm);
-		t1 = t2;
-		t2 = nextTerm;
-		nextTerm = t1 + t2;
+		sum = fib1 + fib2;
+		printf("%lu", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
+
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
 	return (0);
 }
