@@ -8,7 +8,7 @@
  * Return: Always 0.
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 	int t1 = 1, t2 = 2;
@@ -21,4 +21,5 @@ void main(void)
 		t2 = nextTerm;
 		nextTerm = t1 + t2;
 	}
+	return (0);
 }
