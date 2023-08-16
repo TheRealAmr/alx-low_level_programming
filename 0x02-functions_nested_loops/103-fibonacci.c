@@ -8,22 +8,25 @@
  * Return: Always 0.
  */
 
-int main(void)
+int main()
 {
-	int t1 = 1;
-	int t2 = 2;
-	int next;
-	int sum = 2;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	float sum;
 
-	while (next <= 4000000)
+	while (1)
 	{
-		next = t1 + t2;
-		if (next % 2 == 0)
-			sum = sum + next;
-		t1 = t2;
-		t2 = t1;
-	}
+		sum = fib1 + fib2;
 
-	printf("%d\n", sum);
+		if (sum > 4000000)
+			break;
+
+		if ((sum % 2) == 0)
+			sum += sum;
+
+		fib1 = fib2;
+		fib2 = sum;
+	}
+	printf("%.0f\n", sum);
+
 	return (0);
 }
