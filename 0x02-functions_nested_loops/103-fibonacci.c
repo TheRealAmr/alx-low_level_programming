@@ -15,7 +15,7 @@ int main (void)
 	int next;
 	int sum = 2;
 
-	while (next <= limit)
+	while (next <= 4000000)
 	{
 		next = t1 + t2;
 		if (next % 2 == 0)
