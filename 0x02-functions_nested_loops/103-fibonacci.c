@@ -8,7 +8,7 @@
  * Return: Always 0.
  */
 
-int main (void)
+int main(void)
 {
 	int t1 = 1;
 	int t2 = 2;
@@ -23,6 +23,7 @@ int main (void)
 		t1 = t2;
 		t2 = t1;
 	}
+
 	printf("%d\n", sum);
 	return (0);
 }
