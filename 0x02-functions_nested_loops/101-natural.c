@@ -17,11 +17,11 @@ int main(void)
 		if (i % 3 == 0)
 			sum3 += i;
 		if (i % 5 == 0)
-			sum7 += i;
+			sum5 += i;
 		if (i % 15 == 0)
 			sum15 += i;
 	}
 
-	printf("%d\n" sum3 + sum5 - sum15);
+	printf("%d\n", sum3 + sum5 - sum15);
 	return (0);
 }
