@@ -13,9 +13,8 @@ int main(void)
 	int i, n;
 	int t1 = 1, t2 = 2;
 	int nextTerm = t1 + t2;
-	int n = 50;
 
-	for (i = 3; i <= n; ++i)
+	for (i = 3; i <= 50; ++i)
 	{
 		printf("%d, ", nextTerm);
 		t1 = t2;
