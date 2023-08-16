@@ -11,7 +11,7 @@
 int main()
 {
 	unsigned long fib1 = 0, fib2 = 1, sum;
-	float sum;
+	float total;
 
 	while (1)
 	{
@@ -21,12 +21,12 @@ int main()
 			break;
 
 		if ((sum % 2) == 0)
-			sum += sum;
+			total += sum;
 
 		fib1 = fib2;
 		fib2 = sum;
 	}
-	printf("%.0f\n", sum);
+	printf("%.0f\n", total);
 
 	return (0);
 }
