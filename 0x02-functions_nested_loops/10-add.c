@@ -8,7 +8,9 @@
  * Return: The result of the addition.
  */
 
-int add(int num1, int num2)
+int add(int x, int y)
 {
-	return (num1 + num2);
+	int sum = x + y;
+
+	return (sum);
 }
