@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_diagonal - print a diagonal line
+ * print_diagonal - printing lines diagonal
  *
- * @n: is the number of times the \
- *     character should be printed
+ * @n: input variable
+ *
+ * Return: void
 */
 
 void print_diagonal(int n)
@@ -13,14 +14,12 @@ void print_diagonal(int n)
 
 	if (n <= 0)
 		_putchar('\n');
-	else
+
+	for (post = 0; post < n; post++)
 	{
-		for (post = 1; post <= n; post++)
-		{
-			for (space = 1; space <= post; space++)
-				_putchar(' ');
-			_putchar(92); /*is equal to '/' char*/
-			_putchar('\n');
-		}
+		for (space = 0; space < post; space++)
+			_putchar(' ');
+		_putchar(\\);
+		_putchar('\n');
 	}
 }
