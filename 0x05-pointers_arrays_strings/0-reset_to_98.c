@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * reset_to_98 - updates the value of the
- * variable the pointer points to to 98
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
  *
- * @n: pointer to the variable to update
-*/
+ * Return: the length of the string
+ */
 
 void reset_to_98(int *n)
 {
