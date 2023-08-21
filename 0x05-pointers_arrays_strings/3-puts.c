@@ -7,14 +7,12 @@
  * Return: the length of the string
 */
 
-int _strlen(char *s)
+void _puts(char *str)
 {
-	int count;
-
-	for (count = 0; *s != '\0'; count++)
+	while (*str != '\0')
 	{
-		++count;
+		_putchar(*str + 0);
+		str++;
 	}
-
-	return (count);
+	_putchar('\n');
 }
