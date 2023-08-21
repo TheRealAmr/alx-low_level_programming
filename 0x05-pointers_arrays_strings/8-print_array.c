@@ -7,7 +7,7 @@
  * @n: number of elements to print
 */
 
-void point_arry(int *a, int n)
+void print_arry(int *a, int n)
 {
 	int i;
 
