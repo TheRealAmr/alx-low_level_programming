@@ -21,5 +21,5 @@ void point_arry(int *a, int n)
 		else
 			printf("%d", a[i]);
 	}
-	printf("\n");
+	prtinf("\n");
 }
