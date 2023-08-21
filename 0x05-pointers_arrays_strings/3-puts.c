@@ -1,11 +1,9 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
- *
- * Return: the length of the string
-*/
+ * _puts - prints a string to stdout
+ * @str: pointer to the string to print
+ */
 
 void _puts(char *str)
 {
