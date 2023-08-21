@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * reset_to_98 - updates the value of the
- * variable the pointer points to to 98
+ * swap_int - swap the values of two integers
  *
- * @n: pointer to the variable to update
-*/
+ * @a: pointer to 1st value
+ * @b: pointer to 2nd value
+ */
 
 void swap_int(int *a, int *b)
 {
