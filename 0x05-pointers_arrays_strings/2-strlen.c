@@ -5,13 +5,14 @@
  * @s: string to evaluate
  *
  * Return: the length of the string
- */
+*/
 
 int _strlen(char *s)
 {
 	int count;
 
-	for (count = 0; *s != '\0'; ++count)
+	for (count = 0; *s != '\0'; count++)
+		++count;
 
 	return (count);
 }
