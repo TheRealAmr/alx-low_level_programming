@@ -2,8 +2,9 @@
 
 /**
  * _strlen - returns the length of a string
+ * @s: string to evaluate
  *
- * @s: pointer to 1st value / input
+ * Return: the length of the string
  */
 
 int _strlen(char *s)
