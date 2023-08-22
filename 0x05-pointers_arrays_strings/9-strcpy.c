@@ -10,16 +10,14 @@
  * Return: the pointer to dest
  */
 
-void point_arry(int *a, int n)
+char *_stropy(char *dest, char *src)
 {
-	int i;
+	int i = -1;
 
-	for (i = 0; i < n; i++)
-	{
-		if (i != (n-1))
-			printf("%d, ", a[i]);
-		else
-			printf("%d", a[i]);
-	}
-	prtinf("\n");
+	do {
+		i++;
+		dest[i] = src[i];
+	} while (src[i] != '\0');
+
+	return (dest);
 }
