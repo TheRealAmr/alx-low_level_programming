@@ -9,8 +9,8 @@
 
 char *_strcat(char *dest, char *src)
 {
-	strcpy(*dest, *src);
-	strcpy(*dest, '\0');
+	_strcat(dest, src);
+	_strcat(dest, '\0');
 
-	return (*dest);
+	return (dest);
 }
