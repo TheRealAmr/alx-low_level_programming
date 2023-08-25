@@ -7,7 +7,7 @@
  * @a: array
  * @n: number of elements of the array
  *
- * Return: no return
+ * Return: void (No returns)
 */
 
 void reverse_array(int *a, int n)
