@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_chessboard - print the dashboard
@@ -9,16 +10,17 @@
  * Return: No return
 */
 
-void print_chessboard(char (*a)[8])
+void print_diagsums(int *a, int size)
 {
-	int i, j;
+	int ch, s1 = 0, s2 = 0;
 
-	for (i = 0; i < 8; i++)
+	for (ch = 0; ch < size; ch++)
 	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(a[i][j]);
-		}
-		_putchar('\n');
+		s1 += a[ch];
+		s2 += a[size - ch - 1];
+		a += size;
 	}
+
+	printf("%d, ", s1);
+	printf("%d\n", s2);
 }
