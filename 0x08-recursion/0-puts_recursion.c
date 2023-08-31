@@ -7,17 +7,15 @@
  * Return: void
 */
 
-void amr(char *str)
-{
-	while (*str != '\0')
-	{
-		_putchar(*str + 0);
-		str++;
-	}
-	_putchar('\n');
-}
-
 void _puts_recursion(char *s)
 {
-	amr(s);
+	if (*s == '\0')
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
 }
