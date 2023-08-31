@@ -1,0 +1,22 @@
+#include "main.h"
+
+/**
+ * _puts_recursion - prints a string
+ * @s: a string
+ * Return: void
+*/
+
+void theamrf(char *str)
+{
+	while (*str != '\0')
+	{
+		_putchar(*str + 0);
+		str++;
+	}
+	_putchar('\n');
+}
+
+void _puts_recursion(char *s)
+{
+	theamrf(s);
+}
