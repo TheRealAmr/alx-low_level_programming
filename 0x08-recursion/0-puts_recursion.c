@@ -2,7 +2,6 @@
 
 /**
  * _puts_recursion - prints a string
- * amr - prints letter by letter
  * @s: a string
  * Return: void
 */
