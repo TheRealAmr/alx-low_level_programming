@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < argc; i++)
 	{
-		if ((97 <=  atoi(argv[i])) && 122 >= (atoi(argv[i])))
+		if (argv[i][0] >= 'a' && argv[i][0] <= 'z')
 		{
 			printf("Error\n");
 			return (1);
