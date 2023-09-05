@@ -14,6 +14,7 @@ char *_strdup(char *str)
 	char *var = NULL;
 	char *temp = str;
 	int i = 0;
+	int j;
 	int size = 0;
 
 	while (temp[i] != '\0')
@@ -30,8 +31,14 @@ char *_strdup(char *str)
 	else
 	{
 		var = (char *)malloc(sizeof(char) * size);
-		str = var;
+
+		for (j = 0; str[j] != '\0'; j++)
+		{
+			var[j] = str[j];
+		}
+
+		var[j] = '\0';
 	}
 
-	return (str);
+	return (var);
 }
