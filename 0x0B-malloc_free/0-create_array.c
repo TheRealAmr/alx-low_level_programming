@@ -14,42 +14,23 @@
 
 char *create_array(unsigned int size, char c)
 {
+	char *str = NULL;
 	unsigned int i;
-	char *str;
 
-	str = malloc(sizeof(char) * size);
-
-	i = 0;
-
-	while (i < size)
+	if (size == 0)
+		return (NULL);
+	if (size != 0)
 	{
-		if (str == NULL)
-		{
-			return (NULL);
-		}
-		else
-		{
-			if (size == 0)
-			{
-				return (NULL);
-			}
-			else
-			{
-				while (i < size)
-				{
-					str[i] = c;
-					i++;
-				}
+		str = (char *)malloc(sizeof(char) * size);
 
-				if (str == NULL)
-				{
-					free(str);
-					return (NULL);
-				}
-				else
-				{
-					free(str);
-				}
+		if (str != NULL)
+		{
+			i = 0;
+
+			while (i < size)
+			{
+				str[i] = c;
+				i++;
 			}
 		}
 	}
