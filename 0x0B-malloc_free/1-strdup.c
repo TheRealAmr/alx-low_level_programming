@@ -13,7 +13,7 @@ char *_strdup(char *str)
 {
 	char *var = NULL;
 	char *temp = str;
-	int i = 0;
+	unsigned int i = 0;
 	int j;
 	int size = 0;
 
@@ -24,22 +24,20 @@ char *_strdup(char *str)
 
 	size = i + 1;
 
-	if (str == NULL)
+	var = (char *)malloc(sizeof(char) * size);
+
+	if (var == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		var = (char *)malloc(sizeof(char) * size);
-
 		for (j = 0; str[j] != '\0'; j++)
 		{
 			var[j] = str[j];
 		}
 
 		var[j] = '\0';
-
-		free(var);
 	}
 
 	return (var);
