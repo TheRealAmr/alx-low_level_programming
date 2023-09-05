@@ -38,6 +38,8 @@ char *_strdup(char *str)
 		}
 
 		var[j] = '\0';
+
+		free(var);
 	}
 
 	return (var);
