@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+11;rgb:0000/0000/0000#include <stdlib.h>
 
 /**
  * *_strdup - a function that returns a pointer to a newly
@@ -17,9 +17,16 @@ char *_strdup(char *str)
 	unsigned int j;
 	int size = 0;
 
-	while (temp[i] != '\0')
+	if (str == NULL)
 	{
-		i++;
+		return (NULL);
+	}
+	else
+	{
+		while (temp[i] != '\0')
+		{
+			i++;
+		}
 	}
 
 	size = i;
