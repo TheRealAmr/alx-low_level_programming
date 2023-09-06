@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 		count2++;
 	}
 
-	char *news1 = NULL;
+	char *news = NULL;
 	char *temp = s1;
 	unsigned int i = 0;
 
@@ -52,13 +52,13 @@ char *str_concat(char *s1, char *s2)
 
 	size = i;
 
-	news1 = (char *)malloc(sizeof(char) * size + 1);
+	news = (char *)malloc(sizeof(char) * size + 1);
 
-	if (news1 != NULL)
+	if (news != NULL)
 	{
 		for (j = 0; s1[j] != '\0'; j++)
 		{
-			news1[j] = s1[j];
+			news[j] = s1[j];
 		}
 	}
 	else
@@ -66,6 +66,6 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	news1[j] = '\0';
-	return (news1);
+	news[j] = '\0';
+	return (news);
 }
