@@ -13,9 +13,9 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int count = 0, count2 = 0;
-	unsigned int i = 0;
-	unsigned int j;
+	int count = 0, count2 = 0, i = 0;
+	char *news = NULL;
+
 
 	while (*(s1 + count) != '\0')
 	{
@@ -31,9 +31,6 @@ char *str_concat(char *s1, char *s2)
 		count2++;
 	}
 
-	char *news = NULL;
-	char *temp = s1;
-
 	const char *result = s1;
 
 	if (result == NULL)
@@ -42,29 +39,22 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
+		char *temp = s1;
 		while (temp[i] != '\0')
-		{
 			i++;
-		}
 	}
 
-	int size = 0;
+	unsigned int j;
 
-	size = i;
-
-	news = (char *)malloc(sizeof(char) * size + 1);
+	news = (char *)malloc(sizeof(char) * i + 1);
 
 	if (news != NULL)
 	{
 		for (j = 0; s1[j] != '\0'; j++)
-		{
 			news[j] = s1[j];
-		}
 	}
 	else
-	{
 		return (NULL);
-	}
 
 	news[j] = '\0';
 	return (news);
