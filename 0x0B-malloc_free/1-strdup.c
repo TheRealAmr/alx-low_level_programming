@@ -1,5 +1,5 @@
 #include "main.h"
-11;rgb:0000/0000/0000#include <stdlib.h>
+#include <stdlib.h>
 
 /**
  * *_strdup - a function that returns a pointer to a newly
