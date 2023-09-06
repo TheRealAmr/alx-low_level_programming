@@ -29,9 +29,9 @@ char *str_concat(char *s1, char *s2)
 		count2++;
 	}
 
+	unsigned int i = 0;
 	char *news = NULL;
 	char *temp = s1;
-	unsigned int i = 0;
 
 	const char *result = s1;
 
@@ -47,8 +47,8 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 
-	int size = 0;
 	unsigned int j;
+	int size = 0;
 
 	size = i;
 
