@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+11;rgb:0000/0000/0000#include <stdlib.h>
 
 /**
  * str_concat -  a function that concatenates two strings
@@ -15,7 +15,8 @@ char *str_concat(char *s1, char *s2)
 {
 	int count = 0, count2 = 0, i = 0;
 	char *news = NULL;
-
+	unsigned int j;
+	const char *result = s1;
 
 	while (*(s1 + count) != '\0')
 	{
@@ -26,7 +27,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		*(s1 + count) = *(s2 + count2);
 		if (*(s2 + count2) == '\0')
-			const char *result = s1;
 			break;
 		count++;
 		count2++;
@@ -42,8 +42,6 @@ char *str_concat(char *s1, char *s2)
 		while (temp[i] != '\0')
 			i++;
 	}
-
-	unsigned int j;
 
 	news = (char *)malloc(sizeof(char) * i + 1);
 
