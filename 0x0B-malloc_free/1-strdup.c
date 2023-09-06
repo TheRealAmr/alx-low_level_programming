@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	char *var = NULL;
 	char *temp = str;
 	unsigned int i = 0;
-	int j;
+	unsigned int j;
 	int size = 0;
 
 	while (temp[i] != '\0')
@@ -22,9 +22,9 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	size = i + 1;
+	size = i;
 
-	var = (char *)malloc(sizeof(char) * size);
+	var = (char *)malloc(sizeof(char) * size + 1);
 
 	if (var != NULL)
 	{
@@ -32,13 +32,12 @@ char *_strdup(char *str)
 		{
 			var[j] = str[j];
 		}
-
-		var[j] = '\0';
 	}
 	else
 	{
 		return (NULL);
 	}
 
+	var[j] = '\0';
 	return (var);
 }
