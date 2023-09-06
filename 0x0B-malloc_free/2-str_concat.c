@@ -14,6 +14,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	int count = 0, count2 = 0;
+	unsigned int i = 0;
+	unsigned int j;
 
 	while (*(s1 + count) != '\0')
 	{
@@ -29,7 +31,6 @@ char *str_concat(char *s1, char *s2)
 		count2++;
 	}
 
-	unsigned int i = 0;
 	char *news = NULL;
 	char *temp = s1;
 
@@ -47,7 +48,6 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 
-	unsigned int j;
 	int size = 0;
 
 	size = i;
