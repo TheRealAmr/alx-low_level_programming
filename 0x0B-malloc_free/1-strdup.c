@@ -26,11 +26,7 @@ char *_strdup(char *str)
 
 	var = (char *)malloc(sizeof(char) * size);
 
-	if (var == NULL)
-	{
-		return (NULL);
-	}
-	else
+	if (var != NULL)
 	{
 		for (j = 0; str[j] != '\0'; j++)
 		{
@@ -38,6 +34,10 @@ char *_strdup(char *str)
 		}
 
 		var[j] = '\0';
+	}
+	else
+	{
+		return (NULL);
 	}
 
 	return (var);
