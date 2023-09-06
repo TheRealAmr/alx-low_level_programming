@@ -1,5 +1,5 @@
 #include "main.h"
-11;rgb:0000/0000/0000#include <stdlib.h>
+#include <stdlib.h>
 
 /**
  * str_concat -  a function that concatenates two strings
