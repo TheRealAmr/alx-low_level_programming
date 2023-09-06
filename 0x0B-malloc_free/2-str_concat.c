@@ -13,12 +13,12 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	_strcat(s1, s2);
-
 	char *news = NULL;
 	char *temp = s1;
 
-	int i = 0;
+	int j, i = 0;
+
+	_strcat(s1, s2);
 
 	while (temp[i] != '\0')
 	{
@@ -26,8 +26,6 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	news = (char *)malloc(sizeof(char) * i + 1);
-
-	int j;
 
 	if (news != NULL)
 	{
