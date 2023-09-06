@@ -26,12 +26,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		*(s1 + count) = *(s2 + count2);
 		if (*(s2 + count2) == '\0')
+			const char *result = s1;
 			break;
 		count++;
 		count2++;
 	}
-
-	const char *result = s1;
 
 	if (result == NULL)
 	{
