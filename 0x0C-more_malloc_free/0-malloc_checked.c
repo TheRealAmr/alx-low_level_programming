@@ -15,7 +15,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *bb;
 
-	int temp = b;
+	unsigned int temp = b;
 	int size = 0;
 
 	while (temp != '\0')
@@ -26,12 +26,8 @@ void *malloc_checked(unsigned int b)
 
 	bb = malloc(sizeof(int) * size);
 
-	if (bb != NULL)
-	{
-		return (bb);
-	}
-	else
-	{
+	if (bb == NULL)
 		exit(98);
-	}
+	return (bb);
+
 }
