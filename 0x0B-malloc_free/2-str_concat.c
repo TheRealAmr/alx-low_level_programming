@@ -28,7 +28,6 @@ char *str_concat(char *s1, char *s2)
 			first++;
 		}
 	}
-
 	if (s2 != NULL)
 	{
 		i = 0;
