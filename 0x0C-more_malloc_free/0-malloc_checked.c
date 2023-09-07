@@ -13,10 +13,10 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *bb = NULL;
+	void *bb;
 
-	unsigned int temp = b;
-	unsigned int size = 0;
+	int temp = b;
+	int size = 0;
 
 	while (temp != '\0')
 	{
@@ -28,8 +28,7 @@ void *malloc_checked(unsigned int b)
 
 	if (bb != NULL)
 	{
-		b = bb;
-		return (b);
+		return (bb);
 	}
 	else
 	{
