@@ -13,45 +13,36 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int j;
-	int i, first, second, total;
-	char *final;
+	unsigned int s1_len = 0, s2_len = 0, i;
+	char *s;
 
-	first = second = total = 0;
+	/* if NULL is passed, treat as an empty string */
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	if (s1 != NULL)
-	{
-		i = 0;
-		while (s1[i] != '\0')
-		{
-			i++;
-			first++;
-		}
-	}
-	if (s2 != NULL)
-	{
-		i = 0;
-		while (s2[i] != '\0')
-		{
-			i++;
-			second++;
-		}
-	}
+	/* While at index 0 */
+	while (s1[s1_len] != '\0')
+		s1_len++;
+	while (s2[s2_len] != '\0')
+		s2_len++;
 
-	total = first + second;
-	final = (char *)malloc(sizeof(char) * total + 1);
+	if (n >= s2_len)
+		n = s2_len;
 
-	if (final == NULL)
+	/* Memory allocation */
+	s = malloc(sizeof(char) * n + s1_len + 1);
+	if (s == NULL)
 		return (NULL);
 
-	for (i = 0; i < first; i++)
-		final[i] = s1[i];
-	for (j = 0; j < n; j++)
-	{
-		final[i] = s2[j];
-		i++;
-	}
-	final[i] = '\0';
+	for (i = 0; i < s1_len; i++)
+		s[i] = s1[i];
 
-	return (final);
+	for (i = 0; i < n; i++)
+		s[i + s1_len] = s2[i];
+
+	s[i + s1_len] = '\0';
+
+	return (s);
 }
