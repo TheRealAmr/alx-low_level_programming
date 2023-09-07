@@ -14,16 +14,17 @@ void *malloc_checked(unsigned int b)
 {
 	void *bb;
 
-	unsigned int temp = b;
-	int size = 0;
+	/* unsigned int temp = b; */
+	/* int size = 0; */
 
-	while (temp != '\0')
-	{
-		size = size + 1;
-		temp = temp + 1;
-	}
+	/* while (temp != '\0') */
+	/*{ */
+	/*	size = size + 1; */
+	/*	temp = temp + 1; */
+	/*} */
 
-	bb = malloc(sizeof(int) * size + 1);
+	/* bb = malloc(sizeof(int) * size + 1); */
+	bb = malloc(b);
 
 	if (bb == NULL)
 		exit(98);
