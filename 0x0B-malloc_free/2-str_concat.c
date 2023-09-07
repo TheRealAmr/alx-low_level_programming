@@ -39,19 +39,17 @@ char *str_concat(char *s1, char *s2)
 	total = first + second;
 	final = (char *)malloc(sizeof(char) * total + 1);
 
-	if (final != NULL)
-	{
-		for (i = 0; i < first; i++)
-			final[i] = s1[i];
-
-		for (j = 0; j < second; j++)
-		{
-			final[i] = s2[j];
-			i++;
-		}
-		final[i] = '\0';
-	}
-	else
+	if (final == NULL)
 		return (NULL);
+
+	for (i = 0; i < first; i++)
+		final[i] = s1[i];
+	for (j = 0; j < second; j++)
+	{
+		final[i] = s2[j];
+		i++;
+	}
+	final[i] = '\0';
+
 	return (final);
 }
