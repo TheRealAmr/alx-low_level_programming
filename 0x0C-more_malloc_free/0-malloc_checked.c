@@ -23,7 +23,7 @@ void *malloc_checked(unsigned int b)
 		temp = temp + 1;
 	}
 
-	bb = malloc(sizeof(int) * size);
+	bb = malloc(sizeof(int) * size + 1);
 
 	if (bb == NULL)
 		exit(98);
