@@ -1,13 +1,12 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef FILE_DOG
+#define FILE_DOG
 
 /**
  * struct dog - structure dog
- *
- * @name: atribute pointer to char name dog
- * @age: atribute float age dog
- * @owner: atribute pointer to char owner dog
-*/
+ * @name: atribute pointer to char name's dog
+ * @age: atribute float age's dog
+ * @owner: atribute pointer too char owner's dog
+ */
 
 struct dog
 {
