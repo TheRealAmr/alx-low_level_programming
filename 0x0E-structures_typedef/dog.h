@@ -7,6 +7,7 @@
  * @age: their age
  * @owner: and the owner
  *
+ * Description: typing this bc it triggers the longer description
  */
 
 struct dog
