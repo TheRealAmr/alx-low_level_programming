@@ -1,24 +1,41 @@
-#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
- * list_len - function with the h argument
- * @h: pointer as argument for the structure
- * Description: returns the number of elements in a linked list_t list
- * Return: number of elements
+ * add_node_end - function with 2 arguments
+ * @head: double pointer
+ * @str: string
+ * Return: NULL if failed, else address of start element
 */
 
-size_t list_len(const list_t *h)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	unsigned int counter;
+	list_t *start;
+	list_t *swap = *head;
+	unsigned int length = 0;
 
-	counter = 0;
+	while (str[length])
+		length++;
 
-	while (h != NULL)
+	start = malloc(sizeof(list_t));
+	if (!start)
+		return (NULL);
+
+	start->str = strdup(str);
+	start->length = length;
+	start->next = NULL;
+
+	if (*head == NULL)
 	{
-		counter++;
-		h = h->next;
+		*head = start;
+		return (start);
 	}
 
-	return (counter);
+	while (swap->next)
+		swap = swap->next;
+
+	swap->next = start;
+
+	return (start);
 }
