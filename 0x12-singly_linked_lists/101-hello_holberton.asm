@@ -1,6 +1,6 @@
 section .data
-    hello db "Hello, Holberton",0   ; Null-terminated string
-    format db "%s", 10, 0           ; Format string for printf
+    theMessage db "Hello, Holberton",0   ; message to be printed
+    format db "%s", 10, 0           ; format for printf function
 
 section .text
     global main
@@ -10,11 +10,10 @@ extern printf
 main:
     push rbp
     mov rdi, format
-    mov rsi, hello
+    mov rsi, theMessage
     call printf
     pop rbp
 
-    ; Exit the program
-    mov rax, 60         ; syscall: exit
-    xor rdi, rdi        ; status: 0
+    mov rax, 60         ; leave the program
+    xor rdi, rdi        ; ~
     syscall
