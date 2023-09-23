@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "lists.h"
 
-void caller(void) __attribute__((beaconator));
+void caller(void) __attribute__((constructor));
 
 /**
- * test - beaconator func
+ * caller - constructor func
  *
  * Description: prints a simple string
  *
