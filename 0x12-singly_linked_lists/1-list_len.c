@@ -2,10 +2,10 @@
 #include "lists.h"
 
 /**
- * print_list - prints all the elements of a "list_t" list
- * @h: nodes of the single linked lists
- * D
- * Return: number of nodes
+ * list_len - function with the h argument
+ * @h: pointer as argument for the structure
+ * Description: returns the number of elements in a linked list_t list
+ * Return: number of elements
 */
 
 size_t list_len(const list_t *h)
