@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 			cents = cents - 2;
 		if (cents >= 1)
 			cents = cents - 1;
-		amount++
+		amount++;
 	}
 	printf("%d\n", amount);
 	return (0);
