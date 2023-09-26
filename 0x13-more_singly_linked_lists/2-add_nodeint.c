@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <string.h>
+11;rgb:0000/0000/0000#include <string.h>
 #include <stdio.h>
 
 /**
@@ -11,8 +11,7 @@
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	unsigned int *new_head;
-	unsigned int len = 0;
+	listint_t *new_head;
 
 	new_head = malloc(sizeof(listint_t));
 
@@ -23,5 +22,5 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	new_head->next = (*head);
 	(*head) = new_head;
 
-	return (*new_head);
+	return (*head);
 }
