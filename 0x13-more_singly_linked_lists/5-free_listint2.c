@@ -16,7 +16,7 @@ void free_listint2(listint_t **head)
 	listint_t *freer;
 
 	if (*head == NULL || head == NULL)
-		return ;
+		return;
 
 	while (*head)
 	{
