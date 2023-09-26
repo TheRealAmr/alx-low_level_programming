@@ -4,21 +4,21 @@
 /**
  * free_listint - function with the head argument
  *
- * @head: a single linked list
+ * @head: pointer to struct
  *
- * Description: function the frees up the list
+ * Description: function that frees up the list
  *
  * Return: Nothing
 */
 
-void free_listint(listint_t *head);
+void free_listint(listint_t *head)
 {
-	listint_t *free_er;
+	listint_t *freeit;
 
 	while (head)
 	{
-		free_er = head->next;
+		freeit = head->next;
 		free(head);
-		head = free_er;
+		head = freeit;
 	}
 }
