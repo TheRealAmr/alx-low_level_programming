@@ -3,28 +3,25 @@
 #include <stdio.h>
 
 /**
- * add_node - function of 2 arguments
+ * add_nodeint - function of 2 arguments
  * @head: double pointer
- * @str: string
+ * @n: string
  * Return: NULL if failed, else address of the new element
 */
 
-list_t *add_node(list_t **head, const char *str)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	list_t *start;
+	unsigned int *new_head;
 	unsigned int len = 0;
 
-	while (str[len])
-		len++;
+	new_head = malloc(sizeof(listint_t));
 
-	start = malloc(sizeof(list_t));
-	if (!start)
+	if (new_head == NULL)
 		return (NULL);
 
-	start->str = strdup(str);
-	start->len = len;
-	start->next = (*head);
-	(*head) = start;
+	new_head->n = strdup(n);
+	new_head->next = (*head);
+	(*head) = new_head;
 
-	return (*head);
+	return (new_head);
 }
