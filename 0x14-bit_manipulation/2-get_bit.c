@@ -4,6 +4,7 @@
  * get_bit - a function that returns the
  *           value of a bit at a given index
  * @n: unsigned int
+ * @index: starting from 0 to the index u want to reach
  * Return: the value of the bit at index
 */
 
