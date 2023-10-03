@@ -1,0 +1,30 @@
+#include "main.h"
+
+/**
+ * read_textfile -  reads a text file and prints it
+ *                  to the POSIX standard output
+ * @filename: name of file to be read
+ * @letters: amount of bytes
+ * Return: actual number of letters it could read and print
+*/
+
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	int filePointer;
+	ssize_t size;
+	char buff[READ_BUF_SIZE * 8];
+
+	if (filename == NULL || letters == NULL)
+		return (0);
+
+	filePointer = open(filename, 0_RDONLY);
+
+	if (filePointer == -1)
+		return (0);
+
+	size = read(filePointer, &buff[0], letters);
+	size = write(STDOUT_FILENO, &buff[0], size);
+	close(filePointer);
+
+	return (size);
+}
