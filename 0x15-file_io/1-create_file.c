@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * read_textfile -  a function that creates a file
+ * create_file -  a function that creates a file
  * @filename: name of file to be read
  * @text_content: content
  * Return: 1 on success -1 on failure
